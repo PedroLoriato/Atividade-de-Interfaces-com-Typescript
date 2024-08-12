@@ -57,8 +57,8 @@ const vetAplicacoes: IAplicacao[] = [
 */
 
 console.log("\nExecutando o método aplicaRendimento() dos objetos que implementam a interface IAplicacao");
-vetAplicacoes.forEach(aplicacao => aplicacao.aplicaRendimento());
-vetAplicacoes.forEach(aplicacao => console.log("\n" + aplicacao.toString()));
+vetAplicacoes.forEach(aplicacao => { aplicacao.aplicaRendimento(); console.log(`${aplicacao.toString()}\n`);
+});
 
 // Tentando executar o método viraMes() de um objeto que implementa a interface IAplicacao
 //vetAplicacoes.forEach(aplicacao => aplicacao.viraMes());

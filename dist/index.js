@@ -49,8 +49,10 @@ const vetAplicacoes = [
     Found 1 error in src/index.ts:44
 */
 console.log("\nExecutando o método aplicaRendimento() dos objetos que implementam a interface IAplicacao");
-vetAplicacoes.forEach(aplicacao => aplicacao.aplicaRendimento());
-vetAplicacoes.forEach(aplicacao => console.log("\n" + aplicacao.toString()));
+vetAplicacoes.forEach(aplicacao => {
+    aplicacao.aplicaRendimento();
+    console.log(`${aplicacao.toString()}\n`);
+});
 // Tentando executar o método viraMes() de um objeto que implementa a interface IAplicacao
 //vetAplicacoes.forEach(aplicacao => aplicacao.viraMes());
 /*  src/index.ts:64:46 - error TS2339: Property 'viraMes' does not exist on type 'IAplicacao'.
